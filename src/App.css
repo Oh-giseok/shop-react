@@ -1,6 +1,17 @@
-.slider{
+.slider {
   height: 500px;
   background-image: url('../public/img/bg.jpg');
   background-size: cover;
-  background-position: center;
+  background-position: cneter;
+}
+
+.start {
+  /* opacity: 0; */
+  transform: scale(0);
+}
+
+.end {
+  /* opacity: 1; */
+  transform: scale(1);
+  transition: all 0.5s;
 }
