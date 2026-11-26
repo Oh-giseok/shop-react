@@ -87,15 +87,11 @@ const Cart = () => {
                                     </td>
 
                                     <td className="px-6 py-4">
-                                        {item.imgUrl ? (
-                                            <img
-                                                src={`${import.meta.env.BASE_URL.replace(/\/+$/, '')}/${item.imgUrl.replace(/^\/+/, '')}`}
-                                                alt={`${item.item} 상품 이미지`}
-                                                width="100px"
-                                            />
-                                        ) : (
-                                            <span className="text-gray-400">이미지 없음</span>
-                                        )}
+                                        <img
+                                            src={item.imgUrl}
+                                            alt="상품 이미지"
+                                            width="100px"
+                                        />
                                     </td>
 
                                     <td className="px-6 py-4 font-semibold text-gray-900">

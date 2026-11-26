@@ -51,7 +51,7 @@ const Detail = (props) => {
     }, [])
 
     const moveCart = () => {
-        dispatch(addItem({id: selproduct.id, item: selproduct.title, imgUrl: selproduct.imgUrl, price: selproduct.price, amount: 1}))
+        dispatch(addItem({id: selproduct.id, item: selproduct.title, price: selproduct.price, amount: 1}))
         if(window.confirm('장바구니로 이동하시겠습니까?')){
             navigate('/cart');
         }
@@ -72,7 +72,7 @@ const Detail = (props) => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                 <div className="w-full">
-                    <img src={import.meta.env.BASE_URL + selproduct.imgUrl} alt="상품 이미지" className="w-full h-auto" />
+                    <img src={selproduct.imgUrl} alt="상품 이미지" className="w-full h-auto" />
                 </div>
 
                 <div className="pt-5 md:pt-0 space-y-4">
